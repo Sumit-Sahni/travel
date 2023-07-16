@@ -104,7 +104,7 @@ const rows = [
       Status: 'Completed',
      
     },
-    // ... 10 more rows
+   
   ];
   
 
