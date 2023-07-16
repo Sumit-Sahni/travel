@@ -80,13 +80,14 @@ const DataTable: React.FC<DataTableProps> = ({
             <Table variant="striped" colorScheme="gray">
                 {caption && <caption>{caption}</caption>}
                 <Thead>
-                    <Tr>
+                    <Tr className="w-60">
                         <Th colSpan={headers.length}>
                             <Input
                                 type="text"
                                 placeholder="Search"
                                 value={searchQuery}
                                 onChange={handleSearch}
+                                className="w-40"
                             />
                         </Th>
                     </Tr>
@@ -116,7 +117,7 @@ const DataTable: React.FC<DataTableProps> = ({
                         <Tr>
                             <Td colSpan={headers.length}>
                                 {
-                                    currentPage === 0 ? null : (
+                                    currentPage === 1 ? null : (
                                         <Button
                                             disabled={currentPage === 1}
                                             onClick={handlePreviousPage}
@@ -125,7 +126,7 @@ const DataTable: React.FC<DataTableProps> = ({
                                         </Button>
                                     )
                                 }
-
+                                
                                 <Button
                                     className="mx-4"
                                     disabled={

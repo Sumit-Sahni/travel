@@ -1,7 +1,8 @@
 "use client"
 import { Box, ChakraProvider, Input } from "@chakra-ui/react";
-import DataTable from "../components/DataTable";
-import { useState } from "react";
+import DataTable from "./DataTable";
+import Select from "./Select";
+import { useState, useEffect } from "react";
 
 const headers = [
   "Timestamp",
@@ -13,6 +14,8 @@ const headers = [
   "Select",
 ];
 
+
+
 const rows = [
     {
       Timestamp: '2023-07-01 10:00 AM',
@@ -21,6 +24,7 @@ const rows = [
       Name: 'John Doe',
       Source: 'Website',
       Status: 'Pending',
+      Select : <Select label="select"/>
      
     },
     {
@@ -30,6 +34,7 @@ const rows = [
       Name: 'Jane Smith',
       Source: 'Mobile App',
       Status: 'Completed',
+      Select : <Select label="select"/>
      
     },
     {
@@ -39,6 +44,7 @@ const rows = [
       Name: 'Alex Johnson',
       Source: 'Website',
       Status: 'Pending',
+      Select : <Select label="select"/>
      
     },
     {
@@ -48,6 +54,7 @@ const rows = [
       Name: 'Samuel Wilson',
       Source: 'Mobile App',
       Status: 'Completed',
+      Select : <Select label="select"/>
      
     },
     {
@@ -57,6 +64,7 @@ const rows = [
       Name: 'Emily Thompson',
       Source: 'Website',
       Status: 'Pending',
+      Select : <Select label="select"/>
      
     },
     {
@@ -66,6 +74,7 @@ const rows = [
       Name: 'Michael Davis',
       Source: 'Mobile App',
       Status: 'Completed',
+      Select : <Select label="select"/>
      
     },
     {
@@ -75,6 +84,7 @@ const rows = [
       Name: 'Lisa Johnson',
       Source: 'Website',
       Status: 'Pending',
+      Select : <Select label="select"/>
      
     },
     {
@@ -84,6 +94,7 @@ const rows = [
       Name: 'David Smith',
       Source: 'Mobile App',
       Status: 'Completed',
+      Select : <Select label="select"/>
      
     },
     {
@@ -93,6 +104,7 @@ const rows = [
       Name: 'Sarah Brown',
       Source: 'Website',
       Status: 'Pending',
+      Select : <Select label="select"/>
      
     },
     {
@@ -102,11 +114,13 @@ const rows = [
       Name: 'Steven Anderson',
       Source: 'Mobile App',
       Status: 'Completed',
+      Select : <Select label="select"/>
      
     },
    
   ];
   
+
 
 const MyPage: React.FC = () => {
    
@@ -125,4 +139,15 @@ const MyPage: React.FC = () => {
   );
 };
 
+// export async function getServerSideProps() {
+//   // Fetch data from your API endpoint
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//   const data = await response.json();
+
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// }
 export default MyPage;
