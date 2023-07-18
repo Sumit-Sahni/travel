@@ -76,7 +76,7 @@ const DataTable: React.FC<DataTableProps> = ({
         : getSortedRows();
 
     return (
-        <section className="w-4/5 mx-auto">
+        <section className="w-full lg:w-4/5 mx-auto">
             <Table variant="striped" colorScheme="gray">
                 {caption && <caption>{caption}</caption>}
                 <Thead>
